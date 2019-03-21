@@ -1,0 +1,27 @@
+{
+  "presets": [
+    ["env", {
+      "targets": { "browsers": ["last 2 versions", "ie 11"], "modules": false },
+      "useBuiltIns": true
+    }],
+    "react"
+  ],
+  "retainLines": true,
+  "plugins": [
+    "transform-runtime",
+    "transform-object-rest-spread",
+    "transform-class-properties",
+    "syntax-dynamic-import"
+  ],
+  "env": {
+    "development": {},
+    "production": {
+      "presets": ["react-optimize"]
+    },
+    "test": {
+      "plugins": [
+        ["flow-runtime", {"assert": true, "annotate": true}]
+      ]
+    }
+  }
+}
